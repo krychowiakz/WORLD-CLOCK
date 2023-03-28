@@ -37,6 +37,7 @@ select {
 }
 
 .container {
+
   max-width: 600px;
   margin: 0 auto;
   background-color: rgb(254, 254, 254);
