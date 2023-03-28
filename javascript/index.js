@@ -24,8 +24,21 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
-}
 
+
+// Auckland
+let aucklandElement = document.querySelector("#auckland");
+if (aucklandElement) {
+  let aucklandDateElement = aucklandElement.querySelector(".date");
+  let aucklandTimeElement = aucklandElement.querySelector(".time");
+  let aucklandTime = moment().tz("Pacific/Auckland");
+
+  aucklandDateElement.innerHTML = aucklandTime.format("MMMM	Do YYYY");
+  aucklandTimeElement.innerHTML = aucklandTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}
+}
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
